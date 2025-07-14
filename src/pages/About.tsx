@@ -29,7 +29,7 @@ const About = () => {
   const experiences = [
     {
       title: "Full Stack Web Developer Internship",
-      company: "Stockit Project Limited India",
+      company: "Strackit Private Limited",
       period: "March 2024 - May 2024",
       description: "Managed databases using SQL to store, retrieve, and manipulate data effectively with integrity. Created user login and authentication features to prevent user data and privacy to cyber-exploiters."
     },
@@ -61,7 +61,7 @@ const About = () => {
   ];
 
   const certifications = [
-    "Certified Full Stack Developer – Stackit",
+    "Certified Full Stack Developer – Strackit",
     "Certified UI UX Developer – Coder One"
   ];
 

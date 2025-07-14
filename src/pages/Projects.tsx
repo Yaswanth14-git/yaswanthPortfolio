@@ -1,9 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Code, Database, Globe, Shield } from "lucide-react";
+import { ExternalLink, Github, Code, Database, Globe, Shield, Link } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
   const projects = [
     {
       title: "User Authentication System",
@@ -77,7 +79,7 @@ const Projects = () => {
               My <span className="text-primary">Projects</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              A collection of projects showcasing my skills in full-stack development, 
+              A collection of projects showcasing my skills in full-stack development,
               UI/UX design, and modern web technologies.
             </p>
           </div>
@@ -89,8 +91,8 @@ const Projects = () => {
         <section className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="p-6 bg-gradient-card shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -140,7 +142,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-3">
+                {/* <div className="flex gap-3">
                   <Button variant="outline" size="sm" className="flex-1">
                     <Github className="w-4 h-4 mr-2" />
                     Code
@@ -149,7 +151,7 @@ const Projects = () => {
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Demo
                   </Button>
-                </div>
+                </div> */}
               </Card>
             ))}
           </div>
@@ -168,8 +170,8 @@ const Projects = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {Object.entries(skills).map(([category, techs], index) => (
-              <Card 
-                key={category} 
+              <Card
+                key={category}
                 className="p-6 bg-gradient-card shadow-card hover:shadow-elegant transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -197,14 +199,21 @@ const Projects = () => {
               Check out my GitHub profile for more projects and contributions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
-                <Github className="w-5 h-5 mr-2" />
-                View GitHub Profile
-              </Button>
-              <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
+              <a
+                href="https://github.com/Yaswanth14-git"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
+                  <Github className="w-5 h-5 mr-2" />
+                  View GitHub Profile
+                </Button>
+              </a>
+
+              {/* <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Download Resume
-              </Button>
+              </Button> */}
             </div>
           </Card>
         </section>
@@ -215,7 +224,7 @@ const Projects = () => {
             Interested in Working Together?
           </h2>
           <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities and exciting projects. 
+            I'm always open to discussing new opportunities and exciting projects.
             Let's create something amazing together!
           </p>
           <Button variant="hero" size="lg">

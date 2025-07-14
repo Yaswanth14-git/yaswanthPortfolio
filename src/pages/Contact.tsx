@@ -20,7 +20,7 @@ const Contact = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 8838696278",
+      value: "+91 88386 96278",
       href: "tel:+918838696278"
     },
     {
@@ -41,13 +41,13 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/in/yaswanth-v-2a0167292/",
       color: "text-blue-600"
     },
     {
       icon: Github,
       label: "GitHub", 
-      href: "#",
+      href: "https://github.com/Yaswanth14-git",
       color: "text-gray-800"
     }
   ];
@@ -239,7 +239,7 @@ const Contact = () => {
             </Card>
 
             {/* Availability */}
-            <Card className="p-6 bg-gradient-primary text-white animate-slide-in-right" style={{ animationDelay: "0.4s" }}>
+            {/* <Card className="p-6 bg-gradient-primary text-white animate-slide-in-right" style={{ animationDelay: "0.4s" }}>
               <h3 className="text-xl font-semibold mb-4">Let's Work Together</h3>
               <p className="text-white/90 mb-4 text-sm">
                 I'm currently available for:
@@ -262,7 +262,7 @@ const Contact = () => {
                   Technical consultations
                 </li>
               </ul>
-            </Card>
+            </Card> */}
           </div>
         </div>
 
